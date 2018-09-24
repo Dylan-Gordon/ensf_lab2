@@ -2,16 +2,43 @@
 #include <stdlib.h>
 #include "Shape.h"
 #include "Point.h"
-#include <string>
+#include <string.h>
 
 using namespace std;
 
-Shape::Shape(string name, double x, double y) 
-	: shapeName(name), origin(x, y){}
-/*	
+Shape::Shape(const char* name, double x, double y) : origin(x, y){
+	shapeName = new char[strlen(name) + 1];
+	strcpy(shapeName, name);
+}
+
 Shape::~Shape() {
-	delete shapeName;
-}*/
+	delete[] shapeName;
+}
+
+Shape::Shape(const Shape& source) : origin(source.origin), shapeName(new
+	char[strlen(source.shapeName) + 1])
+{
+	if (shapeName == NULL) {
+		cerr << "Memory not available...";
+		exit(1);
+	}
+	strcpy(shapeName, source.shapeName);
+}
+
+Shape& Shape::operator=(const Shape& rhs)
+{
+	if (this == &rhs)
+		return *this;
+	delete[] shapeName;
+	shapeName = new char[strlen(rhs.shapeName) + 1];
+	if (shapeName == NULL) {
+		cerr << "Memory not available...";
+		exit(1);
+	}
+	strcpy(shapeName, rhs.shapeName);
+	origin = rhs.origin;
+	return *this;
+}
 
 Point& Shape::getOrigin(){
 	return origin;

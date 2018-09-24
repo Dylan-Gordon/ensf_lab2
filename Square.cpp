@@ -5,8 +5,16 @@
 #include <iomanip>
 using namespace std;
 
-Square::Square(string name, double x, double y, double side)
+Square::Square(const char* name, double x, double y, double side)
 		: Shape(name, x, y), side_a(side) {}
+
+Square::Square(const Square& source) : Shape(source), side_a(source.side_a) {}
+
+Square& Square::operator=(const Square& rhs) {
+	Shape::operator=(rhs);
+	side_a = rhs.side_a;
+	return *this;
+}
 
 double Square::area() {
 	return (side_a * side_a);
