@@ -4,9 +4,10 @@
 #define SQUARE_H
 class Square : public Shape {
 public:
-	Square(string name, double x, double y, double side);
+	Square(const char* name, double x, double y, double side);
 	//Constructor to initialize data members
 
+	Square& operator=(const Square& rhs);
 	double area();
 	//Returns the area of the square
 
@@ -22,7 +23,7 @@ public:
 	//Area:
 	//Perimeter:
 
-private:
+protected:
 	double side_a;
 };
 #endif

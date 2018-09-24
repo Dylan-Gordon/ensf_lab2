@@ -2,17 +2,17 @@
 // ENSF 480 - Lab 2 - Exercise A
 // Zach Sims and Dylan Gordon
 
-#include "Shape.h"
+#include "Square.h"
 
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-class Rectangle : public Shape {
+class Rectangle : public Square {
 	public:
 	
-		Rectangle(string name, double x, double y, double length, double width);
+		Rectangle(const char* name, double x, double y, double length, double width);
 
-		Rectangle& operator=(Rectangle& source);
+		Rectangle& operator=(Rectangle& rhs);
 
 		double area();
 		//Returns the area of the rectangle
@@ -33,9 +33,8 @@ class Rectangle : public Shape {
 
 		void set_side_b(double d);
 	private:
-	
-	double length;
-	double width;
+
+	double side_b;
 	
 };
 

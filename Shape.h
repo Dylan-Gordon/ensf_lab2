@@ -10,12 +10,16 @@ using namespace std;
 
 class Shape {
 public:
-	Shape(string name, double x, double y);
+	Shape(const char* name, double x, double y);
 	//Constructor to initialize data members
-/*
+
+	Shape& operator=(const Shape& rhs);
+
+	Shape(const Shape& source);
+
 	virtual ~Shape();
 	//Default destructor
-*/
+
 	Point& getOrigin();
 	//Getter method for origin
 
@@ -37,8 +41,8 @@ public:
 	void move(double dx, double dy);
 	//Changes the shapes orignin coordinates to x + dx and y + dy
 
-private:
-	string shapeName;
+protected:
+	char* shapeName;
 	Point origin;
 };
 #endif

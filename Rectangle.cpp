@@ -7,34 +7,34 @@
 #include <iomanip>
 #include "Rectangle.h"
 
-Rectangle::Rectangle(string name, double x, double y, double length, double width)
-			: Shape(name, x, y), length(length), width(width){}
+Rectangle::Rectangle(const char* name, double x, double y, double length, double width)
+			: Square(name, x, y, length), side_b(width){}
 
-Rectangle& Rectangle::operator=(Rectangle& source) {
-	Shape(source.getName(), source.getOrigin().getX(), source.getOrigin().getY());
-	length = source.length;
-	width = source.width;
+Rectangle& Rectangle::operator=(Rectangle& rhs) {
+	Square::operator=(rhs);
+	side_b = rhs.side_b;
+	return *this;
 }
 double Rectangle::area() {
-	return (length * width);
+	return (side_a * side_b);
 }
 
 double Rectangle::perimeter() {
-	return (double(2)*length + double(2)*width);
+	return (double(2)*side_a + double(2)*side_b);
 }
 
 void Rectangle::display() {
 	Shape::display();
-	cout << "Side a: " << setprecision(10) << length << endl;
-	cout << "Side b: " << width << endl;
+	cout << "Side a: " << setprecision(10) << side_a << endl;
+	cout << "Side b: " << side_b << endl;
 	cout << "Area: " << area() << endl;
 	cout << "Perimeter: " << perimeter() << endl;
 }
 
 void Rectangle::set_side_a(double d) {
-	length = d;
+	side_a = d;
 }
 
 void Rectangle::set_side_b(double d) {
-	width = d;
+	side_b = d;
 }
