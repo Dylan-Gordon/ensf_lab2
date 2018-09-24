@@ -10,6 +10,8 @@
 Rectangle::Rectangle(const char* name, double x, double y, double length, double width)
 			: Square(name, x, y, length), side_b(width){}
 
+Rectangle::Rectangle(const Rectangle& source) : Square(source), side_b(source.side_b) {}
+
 Rectangle& Rectangle::operator=(Rectangle& rhs) {
 	Square::operator=(rhs);
 	side_b = rhs.side_b;

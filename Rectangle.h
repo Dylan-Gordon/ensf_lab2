@@ -12,6 +12,8 @@ class Rectangle : public Square {
 	
 		Rectangle(const char* name, double x, double y, double length, double width);
 
+		Rectangle(const Rectangle& source);
+
 		Rectangle& operator=(Rectangle& rhs);
 
 		double area();

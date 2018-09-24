@@ -8,6 +8,9 @@ public:
 	//Constructor to initialize data members
 
 	Square& operator=(const Square& rhs);
+
+	Square(const Square& source);
+
 	double area();
 	//Returns the area of the square
 
