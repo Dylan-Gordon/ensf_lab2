@@ -54,7 +54,7 @@ void GraphicsWorld::run(){
 	cout << "\nIf it doesn't there is a problem with your assignment operator.\n" << endl;
 	rec2.display();
 
-#if 0
+#if 1
 
 	cout << "\nTesting copy constructor in class Rectangle:" <<endl;
 	Rectangle rec3 (a);
@@ -68,7 +68,7 @@ void GraphicsWorld::run(){
 	rec3.display();
 #endif // end of block to test Rectangle
 
-#if 0 // Change 0 to 1 to test using array of pointer and polymorphism
+#if 1 // Change 0 to 1 to test using array of pointer and polymorphism
 	cout << "\nTesting array of pointers and polymorphism:" <<endl;
 	Shape* sh[4];
 	sh[0] = &s;

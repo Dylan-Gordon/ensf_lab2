@@ -26,7 +26,7 @@ public:
 	string getName();
 	//Getter method for name
 
-	void display();
+	void virtual display();
 	//Displays the Shape name in the following format:
 	//Shape Name: 
 	//x-coordinate:

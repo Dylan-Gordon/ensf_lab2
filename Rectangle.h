@@ -34,7 +34,7 @@ class Rectangle : public Square {
 		void set_side_a(double d);
 
 		void set_side_b(double d);
-	private:
+	protected:
 
 	double side_b;
 	
