@@ -9,7 +9,7 @@ class Circle: public Shape{
 	
 	public:
 	
-		Circle(string name, double x, double y, double radius);
+		Circle(const char* name, double x, double y, double radius);
 	
 		double area();
 	

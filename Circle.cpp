@@ -8,8 +8,8 @@
 
 using namespace std;
 
-Circle::Circle(string name, double x, double y, double r)
-	: Shape(name, x, y), radius(r) {}
+Circle::Circle(const char* name, double x, double y, double radius)
+	: Shape(name, x, y), radius(radius) {}
 
 double Circle::area(){
 	return pow(radius, 2)*M_PI;
