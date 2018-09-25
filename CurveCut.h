@@ -1,5 +1,8 @@
 // CurveCut.h
 
+#include "Rectangle.h"
+#include "Circle.h"
+
 #ifndef CURVECUT_H
 #define CURVECUT_H
 
@@ -9,9 +12,10 @@ class CurveCut: public Rectangle, public Circle{
 		
 		CurveCut(const char* name, double x, double y, double length, double width, double radius);
 	
+		void display();
 	private:
 	
 	
-}
+};
 
 #endif

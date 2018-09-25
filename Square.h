@@ -2,7 +2,7 @@
 
 #ifndef SQUARE_H
 #define SQUARE_H
-class Square : public Shape {
+class Square : virtual public Shape {
 public:
 	Square(const char* name, double x, double y, double side);
 	//Constructor to initialize data members

@@ -40,6 +40,10 @@ public:
 
 	void move(double dx, double dy);
 	//Changes the shapes orignin coordinates to x + dx and y + dy
+	
+	virtual double perimeter()=0;
+	
+	virtual double area()= 0;
 
 protected:
 	char* shapeName;

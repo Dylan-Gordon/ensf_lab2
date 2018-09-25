@@ -5,7 +5,7 @@
 
 #include "Shape.h"
 
-class Circle: public Shape{
+class Circle: virtual public Shape{
 	
 	public:
 	
@@ -21,7 +21,7 @@ class Circle: public Shape{
 		
 		void display();
 		
-	private:
+	protected:
 	
 		double radius;
 	

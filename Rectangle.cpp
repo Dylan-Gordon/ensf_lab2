@@ -8,7 +8,7 @@
 #include "Rectangle.h"
 
 Rectangle::Rectangle(const char* name, double x, double y, double length, double width)
-			: Square(name, x, y, length), side_b(width){}
+			:  Square(name, x, y, length), Shape(name, x, y), side_b(width){}
 
 Rectangle::Rectangle(const Rectangle& source) : Square(source), side_b(source.side_b) {}
 
