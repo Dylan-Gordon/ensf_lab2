@@ -11,8 +11,18 @@ class CurveCut: public Rectangle, public Circle{
 	public:
 		
 		CurveCut(const char* name, double x, double y, double length, double width, double radius);
+
+		CurveCut(const CurveCut& source);
+
+		CurveCut& operator=(const CurveCut& rhs);
 	
 		void display();
+
+		double area();
+		
+		double perimeter();
+
+
 	private:
 	
 	

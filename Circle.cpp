@@ -11,6 +11,13 @@ using namespace std;
 Circle::Circle(const char* name, double x, double y, double radius)
 	: Shape(name, x, y), radius(radius) {}
 
+Circle::Circle(const Circle& source) : Shape(source), radius(source.radius){}
+
+Circle& Circle::operator=(const Circle& rhs) {
+	Shape::operator=(rhs);
+	radius = rhs.radius;
+	return *this;
+}
 double Circle::area(){
 	return pow(radius, 2)*M_PI;
 }

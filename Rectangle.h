@@ -14,7 +14,7 @@ class Rectangle : public Square {
 
 		Rectangle(const Rectangle& source);
 
-		Rectangle& operator=(Rectangle& rhs);
+		Rectangle& operator=(const Rectangle& rhs);
 
 		double area();
 		//Returns the area of the rectangle
