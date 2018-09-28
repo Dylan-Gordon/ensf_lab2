@@ -26,7 +26,7 @@ double Square::perimeter() {
 
 void Square::display(){
 	Shape::display();
-	cout << "\nSide a: " << setprecision(10) << side_a << endl;
+	cout << "\nSide a: " << side_a << endl;
 	cout << "\nArea: " << area() << endl;
 	cout << "\nPerimeter: " << perimeter() << endl;
 }

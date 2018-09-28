@@ -42,7 +42,7 @@ int Point::counter(){
 }
 
 void Point::display(){
-	cout<< "X-coordinate: " << setprecision(2) << x << endl;
+	cout<< "X-coordinate: " << fixed << setprecision(2) << x << endl;
 	cout << "Y-coordinate: " << y << endl;
 }
 

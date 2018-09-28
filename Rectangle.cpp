@@ -27,7 +27,7 @@ double Rectangle::perimeter() {
 
 void Rectangle::display() {
 	Shape::display();
-	cout << "Side a: " << setprecision(10) << side_a << endl;
+	cout << "Side a: " << side_a << endl;
 	cout << "Side b: " << side_b << endl;
 	cout << "Area: " << area() << endl;
 	cout << "Perimeter: " << perimeter() << endl;
